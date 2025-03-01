@@ -1,0 +1,72 @@
+## OSI Model Layers Explained with Real-World Examples
+
+The OSI (Open Systems Interconnection) model is a conceptual framework used to understand network interactions in seven layers. Here’s a breakdown of each layer with real-world examples:
+
+### 1. Physical Layer
+**Description:** This layer deals with the physical connection between devices, including cables, switches, and electrical signals.
+
+**Example:** The copper cables or fiber optics used to connect computers in a network.
+
+### 2. Data Link Layer
+**Description:** Responsible for node-to-node data transfer and error detection/correction.
+
+**Example:** Ethernet protocols that govern how data packets are framed and transmitted over the physical medium.
+
+### 3. Network Layer
+**Description:** Handles routing and forwarding of data packets across the network.
+
+**Example:** Routers that direct data from one network to another using IP addresses.
+
+### 4. Transport Layer
+**Description:** Ensures complete data transfer and error recovery.
+
+**Example:** TCP (Transmission Control Protocol) which establishes a connection and guarantees the delivery of data packets.
+
+### 5. Session Layer
+**Description:** Manages sessions between applications, allowing them to communicate.
+
+**Example:** A video conferencing application that maintains a session for ongoing communication.
+
+### 6. Presentation Layer
+**Description:** Translates data formats between the application layer and the network.
+
+**Example:** Encryption and decryption processes, such as SSL/TLS, that secure data before transmission.
+
+### 7. Application Layer
+**Description:** The layer closest to the end user, providing network services to applications.
+
+**Example:** Web browsers (like Chrome or Firefox) that allow users to access the internet.
+
+---
+
+## Subnetting Calculation
+
+### Given IP Range: 192.168.1.0/24
+
+Using a subnetting calculator, here are the results for different subnet configurations:
+
+| Subnet Mask | Subnet Address | Usable IP Range       | Broadcast Address | Total IPs | Usable IPs |
+|-------------|----------------|-----------------------|-------------------|-----------|------------|
+| /25         | 192.168.1.0    | 192.168.1.1 - 192.168.1.126 | 192.168.1.127    | 128       | 126        |
+| /26         | 192.168.1.0    | 192.168.1.1 - 192.168.1.62  | 192.168.1.63     | 64        | 62         |
+| /27         | 192.168.1.0    | 192.168.1.1 - 192.168.1.30  | 192.168.1.31     | 32        | 30         |
+| /28         | 192.168.1.0    | 192.168.1.1 - 192.168.1.14  | 192.168.1.15     | 16        | 14         |
+
+### Analysis of TCP/IP Protocol Suite Across Layers
+
+The TCP/IP protocol suite operates across the layers in a systematic way to ensure reliable communication over networks.
+
+1. **Application Layer:** A user opens a web browser and enters a URL. The browser sends an HTTP request.
+  
+2. **Transport Layer:** TCP segments the request into packets, ensuring that they are sent reliably. It adds sequence numbers for reassembly at the destination.
+
+3. **Network Layer:** The packets are encapsulated with IP addresses, and routers determine the best path through the network.
+
+4. **Data Link Layer:** Each packet is framed for transmission over the physical medium, including MAC addresses for local delivery.
+
+5. **Physical Layer:** The packets are converted into electrical or optical signals and transmitted over cables.
+
+As packets traverse the network, they may encounter various devices that operate at different layers of the OSI model, such as switches (Data Link Layer) and routers (Network Layer). Upon reaching the destination, the process reverses, with each layer stripping off its respective headers until the original data is presented to the application layer, allowing the user to view the requested web page.
+
+This layered approach ensures modularity and interoperability, allowing different network technologies to communicate effectively.
+
